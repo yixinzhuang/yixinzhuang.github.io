@@ -1,9 +1,29 @@
+<!-- 404.html -->
+
+<!-- 
+<script type="text/javascript">
+  var hash = window.location.hash
+  window.location.href = hash ? 'https://yixin.io' + '/' + hash : 'https://yixin.io'
+</script>
+-->
+
+
+<!DOCTYPE html>
 <html>
-<head><title>404 Not Found</title></head>
-<body bgcolor="white">
-<center><h1>404 Not Found</h1></center>
-<hr><center>
-<p class="view"><a href="index"> www.yixina.net </a></p>
-</center>
-</body>
+	
+	<script src="http://cdn.bootcss.com/purl/2.3.1/purl.min.js"></script>
+	<script>
+		var url = purl();
+		if (url.attr('host') == 'yixina.net') {
+		    var old_url = url.attr('source');
+		    var new_url = old_url.replace('yixina.net', "yixin.io");
+		    window.location.replace(new_url); 
+		}else if (url.attr('host') == 'www.yixina.net') {
+		    var old_url = url.attr('source');
+		    var new_url = old_url.replace('www.yixina.net', "yixin.io");
+		    window.location.replace(new_url);
+		}else {
+		    window.location.href="https://yixin.io";
+		}
+	</script>
 </html>
